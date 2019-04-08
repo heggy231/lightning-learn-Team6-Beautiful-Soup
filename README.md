@@ -24,7 +24,8 @@ We used Beautiful Soup to scrape ingredients from a skincare product on Sephora.
 $ virtualenv .env -p python3
 $ source .env/bin/activate
 $ pip3 install beautifulsoup4 html-parser requests
-$ pip3 freeze > requirements.txt```
+$ pip3 freeze > requirements.txt
+```
 
 Then place this code in an app.py file:
 
@@ -40,7 +41,8 @@ ingredient_list = soup.find_all('div', class_='css-pz80c5')
 
 ingredientsLength = len(ingredient_list)
 
-print(ingredient_list[ingredientsLength-1].get_text())```
+print(ingredient_list[ingredientsLength-1].get_text())
+```
 
 Then run `python3 app.py` to output the skincare product's ingredients to your terminal.
 
