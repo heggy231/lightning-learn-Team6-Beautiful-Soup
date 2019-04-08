@@ -4,6 +4,8 @@ Team 6: Beautiful Soup - researching and implementing as a proof of concept
 ## What is Beautiful Soup?
 It is web scrapping libaray tool that parses HTML and XML files. 
 
+Use cases: What if you want to create a new resources page on your
+
 ### Who we are:
 Team 6: Beautiful Soup with members: [ 'Rhea', 'Tiffany', 'Heggy' ]
   
