@@ -39,6 +39,8 @@ print(tag)
 print(f'########tag name:####### {tag.name}')
 tag.name = 'bestbooks'
 print(f'########reassign tag.name = bestbooks:####### {tag.name}')
+print(f'########print out the whole prettify ####### {tag.name}')
+print(soup.prettify()[0:350])
 
 print('########reassign tag[body] is assigned description:#######')
 print(tag['body'])
