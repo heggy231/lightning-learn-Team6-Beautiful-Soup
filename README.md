@@ -31,4 +31,11 @@ soup = BeautifulSoup('<b body="description"">Product Description</b>', 'html')
 ```
   - A link to all relevant resources. This can include the software's site, a helpful tutorial site, a medium article, etc.
   
+
   Submit a link to your repository (including the README.md with paragraphs and links) to the slack channel.
+    - Lynda Intro to [Beautiful Soup](https://www.lynda.com/Python-tutorials/Introduction-Beautiful-Soup)
+    - [Web scrap](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
+    - Medium article on [beautifulsoup](https://medium.com/@wahyudihandry/how-to-build-web-scraping-using-beautifulsoup-and-flask-part-i-ca38a167c236)
+    - Official [doc](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+    - [Youtube](https://youtu.be/XQgXKtPSzUI)
+
