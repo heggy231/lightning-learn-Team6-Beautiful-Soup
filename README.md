@@ -1,27 +1,12 @@
-# Lightning Learn!: lightning-learn-Team6-Beautiful-Soup
-Team 6: Beautiful Soup - researching and implementing as a proof of concept
-
 ## What is Beautiful Soup?
-It is web scrapping libaray tool that parses HTML and XML files. 
+Beautiful Soup is a Python library for pulling data out of HTML and XML files. It commonly saves programmers hours or days of work.
 
-Use cases: What if you want to create a new resources page on your
-
-### Who we are:
-Team 6: Beautiful Soup with members: [ 'Rhea', 'Tiffany', 'Heggy' ]
-  
-## Deliverables
-  - A repository on Github demonstrating the technology assigned to your group. This can include a completed tutorial or an integration into an existing project.  You can even create a simple Hello World!
-  - One paragraph explaining the concept behind the technology assigned to your group. Include this in your `README.md`
-when you want to scraping all the links inside of website use python Beautiful soup to create a resources page.
-
+## Concepts behind Beautiful Soup
+When you want to scrape all the links inside of a website, use python's Beautiful Soup library to create a resources page. 4 main objects in Beatiful soup
+    1) BeautifulSoup object
     2) Tag object
     3) NavigableString object
     4) Comment object
-
-  - One paragraph outlining your findings while using this technology.  Would you recommend it as a solution to the problem it states it solves? Would you use it in your project? Would it significantly increase your skill set?
-
-4 main objects in Beatiful soup
-    1) BeautifulSoup object
 
 install 
 ```python
@@ -32,7 +17,33 @@ soup = BeautifulSoup('<b body="description"">Product Description</b>', 'html')
   - A link to all relevant resources. This can include the software's site, a helpful tutorial site, a medium article, etc.
   
 
-  Submit a link to your repository (including the README.md with paragraphs and links) to the slack channel.
+## Usability Case
+We used Beautiful Soup to scrape ingredients from a skincare product on Sephora. First, create an environment and install Beautiful Soup 4:
+
+```$ pip3 install virtualenv
+$ virtualenv .env -p python3
+$ source .env/bin/activate
+$ pip3 install beautifulsoup4 html-parser requests
+$ pip3 freeze > requirements.txt```
+
+Then place this code in an app.py file:
+
+```import requests
+from bs4 import BeautifulSoup
+
+# Collect and parse first page
+page = requests.get('https://www.sephora.com/product/protini-tm-polypeptide-cream-P427421')
+soup = BeautifulSoup(page.text, 'html.parser')
+
+# Pull all text from the BodyText div
+ingredient_list = soup.find_all('div', class_='css-pz80c5')
+
+ingredientsLength = len(ingredient_list)
+
+print(ingredient_list[ingredientsLength-1].get_text())```
+
+Then run `python3 app.py` to output the skincare product's ingredients to your terminal.
+
     - Lynda Intro to [Beautiful Soup](https://www.lynda.com/Python-tutorials/Introduction-Beautiful-Soup)
     - [Web scrap](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
     - Medium article on [beautifulsoup](https://medium.com/@wahyudihandry/how-to-build-web-scraping-using-beautifulsoup-and-flask-part-i-ca38a167c236)
